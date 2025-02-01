@@ -8,7 +8,7 @@ def find_duplicates_nested_loop(l: list, all = False) -> list:
             if (s[i]==s[j]):
                 if a:
                     d.append(s.pop(j))
-                    if all:
+                    if not all:
                         a = False
                 else:
                     s.pop(j)
@@ -26,9 +26,9 @@ if __name__ == "__main__":
     print("Sample 2:", find_duplicates_nested_loop(sample2))
     print("Sample 3:", find_duplicates_nested_loop(sample3))
     print("Sample 4:", find_duplicates_nested_loop(sample4))
-    #'''
+    '''
     print("Sample 1:", find_duplicates_nested_loop(sample1, all=True))
     print("Sample 2:", find_duplicates_nested_loop(sample2, all=True))
     print("Sample 3:", find_duplicates_nested_loop(sample3, all=True))
     print("Sample 4:", find_duplicates_nested_loop(sample4, all=True))
-    #'''
+    '''
